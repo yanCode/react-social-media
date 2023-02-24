@@ -9,7 +9,7 @@ import Home from "./pages/home/Home";
 
 const currentUser = true;
 const Layout = () => {
-  return (<div>
+  return (<div className='theme-light'>
     <NavBar/>
     <div style={{display: 'flex'}}>
       <LeftBar/>
