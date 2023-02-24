@@ -6,14 +6,17 @@ import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-route
 import Register from "./pages/register/Register";
 import Profile from "./pages/profile/Profile";
 import Home from "./pages/home/Home";
+import {DarkModeContext} from "./context/DarkModeContext";
+import {useContext} from "react";
 
 const currentUser = true;
 const Layout = () => {
-  return (<div className='theme-light'>
+  const {darkMode} = useContext(DarkModeContext);
+  return (<div className={`${darkMode ? 'theme-dark' : 'theme-light'}`}>
     <NavBar/>
     <div style={{display: 'flex'}}>
       <LeftBar/>
-      <div style={{flex:6}}>
+      <div style={{flex: 6}}>
         <Outlet/>
       </div>
       <RightBar/>
