@@ -14,7 +14,7 @@ const NavBar = ()=>{
     <div className='left'>
 
       <Link to="/" style={{textDecoration: "none"}}>
-        <span>lamasocial</span>
+        <span>mysocial</span>
       </Link>
       <HomeOutlinedIcon/>
         <DarkModeOutlinedIcon/>

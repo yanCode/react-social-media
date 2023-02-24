@@ -1,0 +1,13 @@
+.rightBar {
+  flex: 3;
+  border: 1px solid red;
+  position: sticky;
+  top: 50px;
+  height: calc(100vh - 50px);
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
