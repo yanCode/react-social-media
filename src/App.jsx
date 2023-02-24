@@ -2,11 +2,12 @@ import Login from "./pages/login/Login";
 import NavBar from "./components/navBar";
 import LeftBar from "./components/leftBar";
 import RightBar from "./components/rightBar";
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
 import Register from "./pages/register/Register";
 import Profile from "./pages/profile/Profile";
 import Home from "./pages/home/Home";
 
+const currentUser = true;
 const Layout = () => {
   return (<div>
     <NavBar/>
@@ -17,10 +18,19 @@ const Layout = () => {
     </div>
   </div>)
 }
+const ProtectedRoute = ({children}) => {
+  if (!currentUser) {
+    return <Navigate to="/login"/>
+  }
+  return children;
+}
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout/>,
+    element:
+      <ProtectedRoute>
+        <Layout/>
+      </ProtectedRoute>,
     children: [
       {path: '/', element: <Home/>},
       {
