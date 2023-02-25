@@ -1,6 +1,12 @@
 import './login.scss'
+import {AuthContext} from "../../context/authContext";
+import {useContext} from "react";
 
 const Login = () => {
+  const {login, currentUser} = useContext(AuthContext);
+  const handleLogin = () => {
+    login()
+  }
   return (<div className="login">
     <div className="card">
       <div className="left">
@@ -12,11 +18,11 @@ const Login = () => {
         <button>Register</button>
       </div>
       <div className="right">
-       <h1>Login</h1>
-        <form >
+        <h1>Login</h1>
+        <form>
           <input type="text" placeholder="Username"/>
           <input type="password" placeholder="Password"/>
-        <button>Login</button>
+          <button onClick={handleLogin}>Login</button>
         </form>
       </div>
     </div>

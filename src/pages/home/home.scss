@@ -3,7 +3,7 @@
 .home {
   @include themify($themes) {
     min-height: calc(100vh - 50px);
-    background: themed('bg');
+    background: themed('bgSoft');
     color: themed('textColor');
   }
 }
