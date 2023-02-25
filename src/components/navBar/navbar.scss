@@ -1,4 +1,4 @@
-@import "../style.scss";
+@import "../../style";
 
 .navBar {
   @include themify($themes) {

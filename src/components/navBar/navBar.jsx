@@ -8,7 +8,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import {Link} from "react-router-dom";
 import './navbar.scss'
 import {useContext} from "react";
-import {DarkModeContext} from "../context/DarkModeContext";
+import {DarkModeContext} from "../../context/DarkModeContext";
 import {WbSunnyOutlined} from "@mui/icons-material";
 
 

@@ -1,7 +1,7 @@
 import Login from "./pages/login/Login";
-import NavBar from "./components/navBar";
-import LeftBar from "./components/leftBar";
-import RightBar from "./components/rightBar";
+import NavBar from "./components/navBar/navBar";
+import LeftBar from "./components/leftBar/leftBar";
+import RightBar from "./components/rightBar/rightBar";
 import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
 import Register from "./pages/register/Register";
 import Profile from "./pages/profile/Profile";
