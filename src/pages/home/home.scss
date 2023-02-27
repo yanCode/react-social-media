@@ -2,6 +2,7 @@
 
 .home {
   @include themify($themes) {
+    padding: 1.2rem 1rem;
     min-height: calc(100vh - 50px);
     background: themed('bgSoft');
     color: themed('textColor');
