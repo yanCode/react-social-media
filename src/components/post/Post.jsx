@@ -1,8 +1,11 @@
 import {FavoriteSharp, MoreHorizOutlined, ShareOutlined, TextsmsOutlined} from "@mui/icons-material";
 import {Link} from "react-router-dom";
 import './post.scss'
+import Comments from "../comments/Comments";
+import {useState} from "react";
 
 const Post = ({post}) => {
+  const [commentOpen, setCommentOpen] = useState(false);
   return (
     <div className="post">
       <div className="container">
@@ -28,8 +31,8 @@ const Post = ({post}) => {
             <FavoriteSharp/>
             12 likes
           </div>
-          <div className="item">
-            <TextsmsOutlined/>
+          <div className="item" onClick={()=>setCommentOpen(!commentOpen)}>
+            <TextsmsOutlined />
             15 comments
           </div>
           <div className="item">
@@ -37,6 +40,7 @@ const Post = ({post}) => {
             15 shares
           </div>
         </div>
+        {commentOpen && <Comments/> }
       </div>
     </div>
   );
