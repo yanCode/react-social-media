@@ -1,3 +1,5 @@
+@import "../../style";
+
 .register {
   height: 100vh;
   background-color: rgb(193, 190, 255);
@@ -7,18 +9,29 @@
 
   .card {
     width: 50%;
+    min-width: 700px;
     display: flex;
     flex-direction: row-reverse;
     background-color: white;
     border-radius: 10px;
     min-height: 600px;
     overflow: hidden;
+    @include tablet {
+      flex-direction: column;
+      width: 60%;
+      min-width: revert;
+      height: calc(100vh - 0.8rem);
+    }
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      margin: .5rem;
+    }
 
     .left {
       flex: 1;
       background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-        url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
-          center;
+      url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600") center;
       background-size: cover;
       padding: 50px;
       display: flex;
@@ -58,7 +71,7 @@
       justify-content: center;
 
       h1 {
-      color: #555;
+        color: #555;
       }
 
       form {
@@ -67,9 +80,9 @@
         gap: 30px;
 
         input {
-        border: none;
-        border-bottom: 1px solid lightgray;
-        padding: 20px 10px;
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
         }
 
         button {

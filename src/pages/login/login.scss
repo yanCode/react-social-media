@@ -1,16 +1,33 @@
+@import "../../style";
+
 .login {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-background-color: rgb(193, 190, 255);
+
+  background-color: rgb(193, 190, 255);
+
   .card {
     width: 50%;
+    min-width: 700px;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
     min-height: 600px;
     box-shadow: 2px 10px 10px gainsboro inset;
+
+    @include tablet {
+      flex-direction: column;
+      width: 60%;
+      min-width: revert;
+      height: calc(100vh - 0.8rem);
+    }
+    @include mobile {
+      width: 100%;
+       margin: .5rem;
+    }
+
     .left {
       flex: 1 1 50%;
       background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)), url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600") center;
@@ -24,6 +41,14 @@ background-color: rgb(193, 190, 255);
       h1 {
         font-size: 100px;
         line-height: 100px;
+        @include mobile {
+          font-size: 2rem;
+          line-height: revert;
+        }
+        @include tablet {
+          font-size: 2rem;
+          line-height: revert;
+        }
       }
 
       p {
