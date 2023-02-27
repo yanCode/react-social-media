@@ -30,6 +30,9 @@
     .profileContainer {
       margin-top: 3rem;
       padding: 20px 70px;
+      @include tablet {
+        padding: 1.25rem;
+      }
 
       .uInfo {
         height: 180px;
@@ -43,19 +46,22 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 20px;
-        @include mobile{
+        @include mobile {
           flex-direction: column;
           height: 28vh;
           padding: 2rem;
         }
+
         .left {
           flex: 1;
           display: flex;
           gap: 10px;
+          @include tablet {
+            flex-wrap: wrap;
+          }
 
 
-
-          a{
+          a {
             color: themed("textColorSoft");
           }
         }
@@ -89,6 +95,7 @@
               }
             }
           }
+
           button {
             border: none;
             background-color: #5271ff;

@@ -3,12 +3,16 @@
 .stories {
 
   display: flex;
-  height: 250px;
+  height: 15.6rem;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   @include mobile {
     height: 50px;
     justify-content: space-between;
+  }
+  @include tablet{
+    height: 12.5rem;
+    gap:1.25rem;
   }
 
   .story {

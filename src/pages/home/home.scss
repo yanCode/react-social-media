@@ -9,5 +9,8 @@
     @include mobile{
       padding: .6rem;
     }
+    @include tablet{
+      padding: 1.2rem;
+    }
   }
 }
