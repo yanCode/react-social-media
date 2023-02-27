@@ -41,6 +41,9 @@
           background-color: transparent;
           color: themed('textColor');
           caret-color: themed('textColor');
+          @include mobile{
+            display: none;
+          }
         }
       }
     }
@@ -66,6 +69,9 @@
         span {
         }
       }
+       @include mobile{
+            display: none;
+          }
     }
   }
 }
